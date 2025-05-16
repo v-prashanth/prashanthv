@@ -48,8 +48,10 @@ const experiments = {
       Freelance project for a local interior design studio. The site showcases their
       design philosophy, work portfolio, and contact options. Delivered a modern,
       mobile-friendly design using responsive layout techniques and lightweight frontend tech.
-    `
+    `,
+    link: "https://elegantinteriors.vercel.app/" // Replace with the actual site URL
   }
+
 };
 
 export default experiments;

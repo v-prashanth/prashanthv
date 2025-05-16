@@ -1,7 +1,6 @@
-
 import { notFound } from 'next/navigation';
-import { MotionDiv } from '@/components/MotionDiv'; // see below
-import experiments from '@/data/experiments'; // (optional) extract to a separate JS file
+import { MotionDiv } from '@/components/MotionDiv';
+import experiments from '@/data/experiments';
 
 export default function ExperimentDetail({ params }) {
   const experiment = experiments[params.slug];
@@ -19,7 +18,19 @@ export default function ExperimentDetail({ params }) {
       <div className="mt-6 text-gray-200 whitespace-pre-line">
         {experiment.content.trim()}
       </div>
+
+      {experiment.link && (
+        <div className="mt-6">
+          <a
+            href={experiment.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-2 text-blue-400 underline hover:text-blue-300"
+          >
+            Visit Live Site ↗
+          </a>
+        </div>
+      )}
     </MotionDiv>
   );
 }
-
